@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Method</title>
+    <style>
+       h1{
+           color: blue;
+        }
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing:border-box;
+       }
+       body {
+           background-color: hotpink;
+           font-family: Arial, Helvetica, sans-serif;
+       }
+           .wrapper{
+               background-color: #ffffff;
+               width:600px;
+               padding:100px;
+               margin:25px auto 0;
+               box-shadow: 0px 0px 20px rgba(0,0,0,0,5);
+           }
+       .wrapper h2{
+           background-color: turquoise;
+           color: crimson;
+           font-size:24px;
+           padding:10px;
+           margin-bottom: 20px;
+           text-align: center;
+           border: 1px dotted #333;
+       }
+       h4{
+           padding-bottom: 5px;
+           color:#323232;
+       }
+       .input-group{
+           margin-buttom:8px;
+           width:100%;
+           position: relative;
+           display: flex;
+           flex-direction: row;
+           padding: 5px 0;
+       }
+       .input-box{
+           width: 100%;
+           margin-right: 12px;
+           position:relative;
+       }
+       .input-box:last-child{
+           margin-right:0;
+       }
+       .name{
+           padding:14px 10px 50px;
+           with:100%;
+           background-color: #fcfcfc;
+           border: 1px solid #00000033;
+           outline: none;
+           letter-spacing:1px;
+           transition: 0.3s;
+           border-radius: 3px;
+           color:#333;
+       }
+       .name:focus,.dob:focus{
+           -webkit-box-shadow:0 0 2px 1px orangered;
+           -moz-box-shadow:0 0 2px 1px coral;
+           box-shadow:0 0 2px 1px lightcoral;
+           border:1px solid darkblue;
+       }
+       .input-box. icon{
+           width: 48px;
+       display: flex;
+           justify-content: center;
+           align-items: center;
+           position:absolute;
+           top:0px;
+           left: 0px;
+           bottom: 0px;
+           color:#333;
+           background-color: #f1f1f1;
+           border-radius: 2px 0 0 2px;
+           transiton:0.3s;
+           font-size: 20px;
+           pointer-events: none;
+           border: 1px solid #00000033;
+           border-right: none;
+       }
+       .name:focus+.icon{
+           background-color: #7ed321;
+           color: #fff;
+           border-right: 1px solid #7ed321;
+           border:none;
+           transition: 1s;
+       }
+       .dob{
+           width: 30%;
+           padding: 14%;
+           text-align: center;
+           background-color: #fcfcfc;
+           transition: 0.3s;
+           outline: none;
+           border: 1px solid #fcfcfc;
+           border-radius: 3px;
+       }
+       .radio{
+           display:none;
+       }
+       .input-box label{
+           width:40%;
+           padding: 13px;
+           background-color: #fcfcfc;
+           display: inline-block;
+           float: left;
+           text-align: center;
+           border: 1px solid #008CBA;
+       }
+       .input-box label:last-of-type{
+           border-top-rigth-raduis:3px;
+           border-button-right-raduis:3px;
+       }
+       .radio checked+label{
+           background-color:#7ed321 ;
+           color:#fff;
+           transition: 0.5s;
+       }
+       .input-box select{
+           display:inline-block;
+           width: 30%;
+           padding: 12px;
+           background-color: #fcfcfc;
+           float: left;
+           text-align: center;
+           font-size: 16px;
+           outline: none;
+           border: 1px solid #c0bfbf;
+           cursor:pointer;
+           text-align:center;
+       }
+       .input-box select:focus{
+           background-color: #7ed321;
+           color: #ffffff;
+           text-align: center;
+       }
+       button{
+           width: 60%;
+           background:transparent ;
+           border: none;
+           background: #7ed321;
+           color: #fff;
+           padding: 13px;
+           border-radius:4px ;
+           font-size: 12px;
+           transition: all 0.35s ease;
+       }
+       button:hover{
+           cursor:pointer;
+           background: #5eb105;
+       }
+    </style>
+</head>
+<body>
+<h1>PAYMENT METHOD</h1>
+<p>The following indicate the various method in
+which you can pay your fees.choose the one that
+your most confortable with.</p>
+<form class="wrapper">
+    <h2>PAYMENT FORM</h2>
+    <h4>Account</h4>
+    <ha>Account</ha>
+    <div class="input-box">
+        <input type="text"placeholder="Full Name" required class="name"><br><br>
+        <i class="fa fa-envelope icon"></i>
+    </div>>
+    <div class="input-box">
+        <input type="text" placeholder="Nick name" required class="name"><br><br>
+        <i class="fa fa-envelope icon"></i>
+    </div>
+    <div class="input group">
+        <div class="input-box">
+            <input type="email" placeholder="Email Address" require class="name"><br><br>
+            <i class="fa fa-envelope icon"></i>
+        </div>
+        <div class="input-groups">
+            <iv class="input-box">
+                <h4>Date of Birth</h4>
+                <input type="text" placeholder="DD" class="dob">
+                <input type="text" placeholder="MM" class="dob">
+                <input type="text" placeholder="YYY" class="dob">
+            </iv>
+            <form>
+                <input type="radio" name="Gender="Male" checked>Male<b>
+                <input type="radio" name="Gender"value="Female" checked>Female<b>
+            </form>
+        </div>
+        <div class="input-box">
+            <h4>Payment details</h4><br><br><center>
+            <input type="radio" name="pay" id="bc1" checked class="radio"><br><br>
+            <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit card</span></label><br><br>
+                <input tyoe="radio" name="pay" id="bc2" class="radio" ><br><br>
+                <label for="bc2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label><br><br>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class-input-box>
+            <input type="tel" name="card cvc" placeholder="card CVC" required ><br><br>
+            <i class="fa fa-user icon"></i>
+        </div>
+        <div class="input-box">
+            <select>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+            </select>
+            <select>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>>
+            </select>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <button type="submit">Pay Now</button>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+</html>
